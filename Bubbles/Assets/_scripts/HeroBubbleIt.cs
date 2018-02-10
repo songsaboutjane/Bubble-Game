@@ -5,39 +5,40 @@ using UnityEngine;
 public class HeroBubbleIt : MonoBehaviour {
 	private Rigidbody2D rb2d;
 	public float mass = 1f;
-	private MoveHero moveHero;
+	private NewMoveHero newmoveHero;
 	private bool inBubble = false;
 	// Use this for initialization
 	void Start () {
 		rb2d = GetComponent<Rigidbody2D> ();
-		moveHero=GetComponent<MoveHero> ();
+		newmoveHero=GetComponent<NewMoveHero> ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		if (inBubble == false) {
 			rb2d.mass = mass;
+			newmoveHero.enabled=true;
 		}
-		//moveHero.enabled=true;
+		//newmoveHero.enabled=true;
 	}
 
 	void OnTriggerStay2D (Collider2D targ) {
 		if (targ.gameObject.tag.Equals ("Bubble") == true) {
 			inBubble = true;
 			rb2d.mass = 0.0f;
-			moveHero.enabled = false;
+			newmoveHero.enabled = false;
 			Debug.Log ("Touched the bubble");
 
 		} 
 		else {
 			inBubble = false;
-			moveHero.enabled=true;
+			newmoveHero.enabled=true;
 			Debug.Log("HEre");
 		}
 
 	}
 	void OnCollisionEnter2D () {
-		moveHero.enabled=true;
+		newmoveHero.enabled=true;
 	}
 
 

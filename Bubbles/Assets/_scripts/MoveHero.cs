@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MoveHero : MonoBehaviour {
-	public float jumpForce= 100f;
+	public float jumpForce= 400f;
 	public float moveForce= 0.1f;
 	private Rigidbody2D rb2d;
 	public Rigidbody2D bubblePrefab;
@@ -29,7 +29,7 @@ public class MoveHero : MonoBehaviour {
 				rb2d.AddForce (new Vector2 (moveForce, 0));
 			}
 			else {
-				rb2d.MovePosition (rb2d.position + new Vector2 (moveForce, 0) * Time.fixedDeltaTime);
+				rb2d.MovePosition (rb2d.position + new Vector2 (moveForce, 0)* Time.fixedDeltaTime);
 				//rb2d.AddForce (new Vector2 (moveForce, 0));
 			}
 		}

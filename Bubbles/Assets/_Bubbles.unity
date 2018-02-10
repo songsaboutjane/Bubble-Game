@@ -1481,6 +1481,7 @@ GameObject:
   - component: {fileID: 1355787718}
   - component: {fileID: 1355787717}
   - component: {fileID: 1355787722}
+  - component: {fileID: 1355787723}
   - component: {fileID: 1355787721}
   m_Layer: 0
   m_Name: hero
@@ -1599,14 +1600,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 1355787716}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1bf7bb964b7e4d89b8f3e109c4c8e5a, type: 3}
+  m_Script: {fileID: 11500000, guid: c222b9027e8c1496790d19fac35b72a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 400
-  moveForce: 7
-  bubblePrefab: {fileID: 50779964325323130, guid: 99158b51b8d91466090cd1168ff6e172,
-    type: 2}
+  minGroundNormalY: 0.65
+  gravityModifier: 1
+  maxSpeed: 6
+  jumpTakeOffSpeed: 10
 --- !u!114 &1355787722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1355787716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d66c554e0c5a4692810b039786a6c9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minGroundNormalY: 0.65
+  gravityModifier: 1
+--- !u!114 &1355787723
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -1973,7 +1987,6 @@ MonoBehaviour:
   bubblePrefab: {fileID: 50779964325323130, guid: 99158b51b8d91466090cd1168ff6e172,
     type: 2}
   radius: 1.04
-  hit: []
 --- !u!4 &2105129033
 Transform:
   m_ObjectHideFlags: 0
