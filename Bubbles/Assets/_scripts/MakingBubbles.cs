@@ -20,15 +20,14 @@ public class MakingBubbles : MonoBehaviour {
 		if (Input.GetKeyDown(KeyCode.Space)) {
 			if (bubbleCount <= bubbleLimit) {
 				bubbleCount++;
-				Vector3 position= Camera.main.ScreenToWorldPoint(Input.mousePosition);
+				Vector3 position = Camera.main.ScreenToWorldPoint (Input.mousePosition);
 				Instantiate (bubblePrefab, position, Quaternion.identity);
-				hit = Physics.OverlapSphere(position, radius);//Returns an array with all colliders touching or inside the sphere
+
+				hit = Physics.OverlapSphere (position, radius);//Returns an array with all colliders touching or inside the sphere
 				if (hit.Length >= 1 && hit != null) {
-					pickup = hit[1];
+					pickup = hit [1]; 
 				}
 			}
-				
-		}
-		
+		}	
 	}
 }

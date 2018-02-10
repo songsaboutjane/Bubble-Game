@@ -7,7 +7,6 @@ public class NewBubbleScript : MonoBehaviour {
 	private WheelJoint2D joint; 
 	public float range = 0.5f;
 	public float lrForce = 5f;
-	public static bool Collision = false;
 	// Use this for initialization
 	void Start () {
 		rb2d = GetComponent<Rigidbody2D> ();
@@ -37,9 +36,14 @@ public class NewBubbleScript : MonoBehaviour {
 	
 	}
 
-	void OnCollisionEnter2D() {
-		Collision = true;
+	void OnCollisionEnter2D (Collision2D hit) {
+		if (hit.gameObject.tag.Equals ("spikes") == true) {
+			Destroy (gameObject);
+			MakingBubbles.bubbleCount=MakingBubbles.bubbleCount -1;
+			Debug.Log ("Hey");
+		}
 	}
+		
 
 
 
