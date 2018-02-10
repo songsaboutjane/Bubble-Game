@@ -18,20 +18,26 @@ public class HeroBubbleIt : MonoBehaviour {
 		if (inBubble == false) {
 			rb2d.mass = mass;
 		}
-		moveHero.enabled=true;
+		//moveHero.enabled=true;
 	}
 
 	void OnTriggerStay2D (Collider2D targ) {
-		
 		if (targ.gameObject.tag.Equals ("Bubble") == true) {
 			inBubble = true;
 			rb2d.mass = 0.0f;
 			moveHero.enabled = false;
+			Debug.Log ("Touched the bubble");
 
-		} else {
+		} 
+		else {
 			inBubble = false;
+			moveHero.enabled=true;
+			Debug.Log("HEre");
 		}
 
+	}
+	void OnCollisionEnter2D () {
+		moveHero.enabled=true;
 	}
 
 

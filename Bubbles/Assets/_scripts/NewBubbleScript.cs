@@ -40,7 +40,6 @@ public class NewBubbleScript : MonoBehaviour {
 		if (hit.gameObject.tag.Equals ("spikes") == true) {
 			Destroy (gameObject);
 			MakingBubbles.bubbleCount=MakingBubbles.bubbleCount -1;
-			Debug.Log ("Hey");
 		}
 	}
 		
