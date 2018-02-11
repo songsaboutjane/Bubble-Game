@@ -23,7 +23,7 @@ public class HeroBubbleIt : MonoBehaviour {
 	}
 
 	void OnTriggerStay2D (Collider2D targ) {
-		if (targ.gameObject.tag.Equals ("Bubble") == true) {
+		if (targ.gameObject.tag.Equals ("Bubble") == true && targ.GetType() == typeof(CircleCollider2D)) {
 			inBubble = true;
 			rb2d.mass = 0.0f;
 			newmoveHero.enabled = false;
