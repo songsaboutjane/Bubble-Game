@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: aeacd62d33902417b8a5046719b28d9e
+timeCreated: 1518388047
+licenseType: Free
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - sprite1: {fileID: 21300000, guid: 86ca59b9bca0e409b9ba2784fbe69f01, type: 3}
+  - sprite2: {fileID: 21300000, guid: 116ac2caa16ad4f73af4539f8b07d019, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

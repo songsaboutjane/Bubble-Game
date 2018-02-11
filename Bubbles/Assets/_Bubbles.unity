@@ -808,6 +808,7 @@ GameObject:
   - component: {fileID: 1355787717}
   - component: {fileID: 1355787723}
   - component: {fileID: 1355787721}
+  - component: {fileID: 1355787722}
   m_Layer: 0
   m_Name: hero
   m_TagString: Untagged
@@ -827,18 +828,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.005218692, y: -0.013916485}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.65, y: 0.65}
+    oldSize: {x: 0.35, y: 0.32}
     newSize: {x: 0.65, y: 0.65}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.65, y: 0.65}
+  m_Size: {x: 0.25685608, y: 0.19075237}
   m_EdgeRadius: 0
 --- !u!50 &1355787718
 Rigidbody2D:
@@ -894,7 +895,7 @@ SpriteRenderer:
   m_SortingLayerID: -433761613
   m_SortingLayer: 3
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 540edc1018c282449a86fb1fede84e44, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 86ca59b9bca0e409b9ba2784fbe69f01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -911,8 +912,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1355787716}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -24.96, y: -2.52, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -24.96, y: -2.03, z: 0}
+  m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -932,6 +933,19 @@ MonoBehaviour:
   gravityModifier: 1
   maxSpeed: 6
   jumpTakeOffSpeed: 10
+--- !u!114 &1355787722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1355787716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aeacd62d33902417b8a5046719b28d9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite1: {fileID: 21300000, guid: 86ca59b9bca0e409b9ba2784fbe69f01, type: 3}
+  sprite2: {fileID: 21300000, guid: 116ac2caa16ad4f73af4539f8b07d019, type: 3}
 --- !u!114 &1355787723
 MonoBehaviour:
   m_ObjectHideFlags: 0
