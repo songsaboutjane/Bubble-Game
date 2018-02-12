@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Bubble
   - spikes
+  - weighted
   layers:
   - Default
   - TransparentFX
