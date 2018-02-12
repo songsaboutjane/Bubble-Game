@@ -6,6 +6,7 @@ public class NewMoveHero :  PhysicsObject {
 
 	public float maxSpeed = 7;
 	public float jumpTakeOffSpeed = 7;
+	public static bool gotKey;
 
 	//private SpriteRenderer spriteRenderer;
 	//private Animator animator;
@@ -34,5 +35,12 @@ public class NewMoveHero :  PhysicsObject {
 
 
 		targetVelocity = move * maxSpeed;
+	}
+	void OnTriggerEnter2D(Collider2D other) {
+		if (other.gameObject.CompareTag ("key")) {
+			other.gameObject.SetActive (false);
+			gotKey=true;
+	
+		}
 	}
 }
