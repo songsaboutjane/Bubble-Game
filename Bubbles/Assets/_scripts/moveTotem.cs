@@ -4,16 +4,25 @@ using UnityEngine;
 
 public class moveTotem : MonoBehaviour {
 	private Rigidbody2D rb2d;
-	public float maxh=0f;
+	private float count = 100f; 
 	// Use this for initialization
 	void Start () {
 		rb2d = GetComponent<Rigidbody2D> ();
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 		if (onpush.ispushed == true) {
-			rb2d.MovePosition (rb2d.position + new Vector2 (0, -2) * Time.fixedDeltaTime);
+			if (count > 85) {
+				rb2d.MovePosition (rb2d.position + new Vector2 (0, -0.05f));
+				count -= 0.05f;
+			}
+		}
+		else if (onpush.ispushed == false) {
+			if (count < 100) {
+				rb2d.MovePosition (rb2d.position + new Vector2 (0, 0.1f));
+				count += 0.1f;
+			}
 		}
 	}
 }
