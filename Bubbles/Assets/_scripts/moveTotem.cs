@@ -13,7 +13,7 @@ public class moveTotem : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (onpush.ispushed == true) {
-			if (count > 84) {
+			if (count > 80) {
 				rb2d.MovePosition (rb2d.position + new Vector2 (0, -0.05f));
 				count -= 0.05f;
 			}
