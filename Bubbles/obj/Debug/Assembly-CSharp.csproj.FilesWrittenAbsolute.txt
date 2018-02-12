@@ -180,3 +180,5 @@
 /Users/choulding/Git/Bubble-Game/Bubbles/Temp/bin/Debug/UnityEditor.iOS.Extensions.Xcode.xml
 /Users/choulding/Git/Bubble-Game/Bubbles/Temp/bin/Debug/Assembly-CSharp.dll.mdb
 /Users/choulding/Git/Bubble-Game/Bubbles/Temp/bin/Debug/Assembly-CSharp.dll
+/Users/ryanchiu/git/Bubble-Game/Bubbles/Temp/bin/Debug/Assembly-CSharp.dll.mdb
+/Users/ryanchiu/git/Bubble-Game/Bubbles/Temp/bin/Debug/Assembly-CSharp.dll
