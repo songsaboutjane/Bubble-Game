@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class NewMoveHero :  PhysicsObject {
-
+	public Vector3 startp= new Vector3 (-33.07f, -3.19f, 0); 
 	public float maxSpeed = 7;
 	public float jumpTakeOffSpeed = 7;
 	public static bool gotKey;
@@ -42,5 +42,19 @@ public class NewMoveHero :  PhysicsObject {
 			gotKey=true;
 	
 		}
+		else if (other.gameObject.CompareTag("death")) {
+			Respawn();
+		}
+	}
+
+	void OnCollisionEnter2D(Collision2D col) {
+		if (col.gameObject.tag == "death") {
+			Respawn();
+			Debug.Log ("Hey");
+		}
+	}
+
+	void Respawn () {
+		transform.position = startp;
 	}
 }

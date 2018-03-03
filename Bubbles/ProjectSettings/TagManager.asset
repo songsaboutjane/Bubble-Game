@@ -8,6 +8,8 @@ TagManager:
   - spikes
   - weighted
   - key
+  - death
+  - spikedeath
   layers:
   - Default
   - TransparentFX
