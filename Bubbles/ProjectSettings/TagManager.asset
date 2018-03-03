@@ -48,6 +48,15 @@ TagManager:
   - name: Background
     uniqueID: 3093911515
     locked: 0
+  - name: mountains3
+    uniqueID: 3319110569
+    locked: 0
+  - name: mountains2
+    uniqueID: 2172347607
+    locked: 0
+  - name: mountains1
+    uniqueID: 2667888331
+    locked: 0
   - name: Midground
     uniqueID: 1826473197
     locked: 0
