@@ -13,8 +13,8 @@ public class fanoff : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-//		if (leveron.lever == true) {
-//			anim.SetTrigger ("fanOFF");
-//		}
+		if (leveron.lever == true) {
+			anim.SetTrigger ("fanOFF");
+		}
 	}
 }
