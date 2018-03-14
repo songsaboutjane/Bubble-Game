@@ -14,7 +14,11 @@ public class unlockLock : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (NewMoveHero.gotKey == true) {
-			anim.SetTrigger ("unlocked");
+			Debug.Log ("Here");
+			anim.SetTrigger ("unlock");
+		}
+		if (NewMoveHero.gotKey == false) {
+			anim.SetTrigger ("lock");
 		}
 	}
 }

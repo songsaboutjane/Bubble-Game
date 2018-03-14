@@ -7,11 +7,12 @@ public class NewMoveHero :  PhysicsObject {
 	public float maxSpeed = 7;
 	public float jumpTakeOffSpeed = 7;
 	public static bool gotKey;
-
+	public GameObject key;
 	//private SpriteRenderer spriteRenderer;
 	//private Animator animator;
 
 	// Use this for initialization
+
 	void Awake () 
 	{
 		//spriteRenderer = GetComponent<SpriteRenderer> (); 
@@ -52,9 +53,12 @@ public class NewMoveHero :  PhysicsObject {
 			Respawn();
 			Debug.Log ("Hey");
 		}
+
 	}
 
 	void Respawn () {
 		transform.position = startp;
+		gotKey=false;
+		key.SetActive (true);
 	}
 }
