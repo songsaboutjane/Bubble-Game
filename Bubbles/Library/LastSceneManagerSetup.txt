@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/_Bubbles.unity
+- path: Assets/_SCENES/IntroSequence.unity
   isLoaded: 1
   isActive: 1
