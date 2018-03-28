@@ -11,18 +11,33 @@ public class MakingBubbles : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown(KeyCode.Space)) {
+		if (Input.GetMouseButtonDown (0)) {
+			CastRay();
+		}
+	}
+
+	void CastRay() {
+		Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+		RaycastHit2D hit = Physics2D.Raycast (ray.origin, ray.direction, Mathf.Infinity);
+		if (hit) {
+			if (hit.collider.gameObject.name == "hero") {
+				if (bubbleCount <= bubbleLimit) {
+					bubbleCount++;
+					Vector3 position = Camera.main.ScreenToWorldPoint (Input.mousePosition);
+					Instantiate (bubblePrefab, new Vector3 (position.x, position.y, 0), Quaternion.identity);
+				}
+			}
+		} else {
 			if (bubbleCount <= bubbleLimit) {
 				bubbleCount++;
 				Vector3 position = Camera.main.ScreenToWorldPoint (Input.mousePosition);
-				Instantiate (bubblePrefab, new Vector3 (position.x ,position.y,0), Quaternion.identity);
-
+				Instantiate (bubblePrefab, new Vector3 (position.x, position.y, 0), Quaternion.identity);
 			}
-		}	
+		}
 	}
 }
