@@ -10,6 +10,7 @@ TagManager:
   - key
   - death
   - spikedeath
+  - immobile
   layers:
   - Default
   - TransparentFX

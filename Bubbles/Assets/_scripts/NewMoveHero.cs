@@ -25,7 +25,7 @@ public class NewMoveHero :  PhysicsObject {
 
 		move.x = Input.GetAxis ("Horizontal");
 
-		if (Input.GetKeyDown (KeyCode.UpArrow) && grounded) {
+		if (Input.GetKeyDown (KeyCode.UpArrow) && grounded || Input.GetKeyDown (KeyCode.W) && grounded) {
 			velocity.y = jumpTakeOffSpeed;
 		} else if (Input.GetButtonUp ("Jump")) 
 		{

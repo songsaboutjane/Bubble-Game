@@ -5,6 +5,7 @@ using UnityEngine;
 public class HeroBubbleIt : MonoBehaviour {
 	private Rigidbody2D rb2d;
 	private NewMoveHero newmoveHero;
+	public static bool inBubble = false;
 	// Use this for initialization
 	void Start () {
 		rb2d = GetComponent<Rigidbody2D> ();
@@ -18,11 +19,13 @@ public class HeroBubbleIt : MonoBehaviour {
 		if (targ.gameObject.tag.Equals ("Bubble") == true && targ.GetType() == typeof(CircleCollider2D)) {
 			rb2d.mass = 0.0f;
 			newmoveHero.enabled = false;
+			inBubble = true;
 		} 
 	}
 
 	void OnCollisionExit2D () {
 		rb2d.mass = 1f;
 		newmoveHero.enabled=true;
+		inBubble = false;
 	}
 }
