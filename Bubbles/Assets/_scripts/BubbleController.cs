@@ -24,10 +24,6 @@ public class BubbleController : MonoBehaviour {
 			rb2d.AddForce (new Vector2 (lrForce, 0));
 		}
 	}
-	void OnMouseDown(){
-		Destroy (gameObject);
-		MakingBubbles.bubbleCount=MakingBubbles.bubbleCount -1;
-	}
 
 	void OnCollisionEnter2D (Collision2D hit) {
 		if (hit.gameObject.tag.Equals ("spikes") == true) {

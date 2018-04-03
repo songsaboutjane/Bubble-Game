@@ -31,13 +31,17 @@ public class MakingBubbles : MonoBehaviour {
 					Vector3 position = Camera.main.ScreenToWorldPoint (Input.mousePosition);
 					Instantiate (bubblePrefab, new Vector3 (position.x, position.y, 0), Quaternion.identity);
 				}
+			} else if (hit.collider.gameObject.tag == "Bubble") {
+				Destroy (hit.collider.gameObject);
+				bubbleCount--;
 			}
-		} /*else {
+				
+		} else {
 			if (bubbleCount <= bubbleLimit) {
 				bubbleCount++;
 				Vector3 position = Camera.main.ScreenToWorldPoint (Input.mousePosition);
 				Instantiate (bubblePrefab, new Vector3 (position.x, position.y, 0), Quaternion.identity);
 			}
-		}*/
+		}
 	}
 }
