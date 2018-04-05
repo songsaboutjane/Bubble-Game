@@ -49,9 +49,8 @@ public class NewMoveHero :  PhysicsObject {
 	}
 
 	void OnCollisionEnter2D(Collision2D col) {
-		if (col.gameObject.tag == "death") {
+		if (col.gameObject.tag == "death" || col.gameObject.tag == "spikedeath") {
 			Respawn();
-			Debug.Log ("Hey");
 		}
 
 	}

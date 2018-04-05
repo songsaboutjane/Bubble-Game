@@ -26,7 +26,7 @@ public class BubbleController : MonoBehaviour {
 	}
 
 	void OnCollisionEnter2D (Collision2D hit) {
-		if (hit.gameObject.tag.Equals ("spikes") == true) {
+		if (hit.gameObject.tag.Equals ("spikes") == true || hit.gameObject.tag.Equals ("spikedeath") == true) {
 			Destroy (gameObject);
 			MakingBubbles.bubbleCount=MakingBubbles.bubbleCount -1;
 		}

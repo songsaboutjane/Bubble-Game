@@ -25,7 +25,7 @@ public class MakingBubbles : MonoBehaviour {
 		Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 		RaycastHit2D hit = Physics2D.Raycast (ray.origin, ray.direction, Mathf.Infinity);
 		if (hit) {
-			if (hit.collider.gameObject.tag == "Player" || hit.collider.gameObject.tag == "weighted") {
+			if (hit.collider.gameObject.tag == "Player" || hit.collider.gameObject.tag == "weighted" || hit.collider.gameObject.tag == "water") {
 				if (bubbleCount <= bubbleLimit) {
 					bubbleCount++;
 					Vector3 position = Camera.main.ScreenToWorldPoint (Input.mousePosition);
